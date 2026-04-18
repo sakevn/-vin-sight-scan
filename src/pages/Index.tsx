@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { Code as Code2 } from "lucide-react";
 import { VinDecoder } from "@/components/VinDecoder";
 import { VinHistory } from "@/components/VinHistory";
 
@@ -23,14 +25,22 @@ const Index = () => {
           <span className="h-7 w-7 rounded-md bg-gradient-to-br from-primary to-[hsl(var(--primary-glow))] flex items-center justify-center text-primary-foreground text-xs">VIN</span>
           Decoder
         </div>
-        <a
-          href="https://en.wikipedia.org/wiki/Vehicle_identification_number"
-          target="_blank"
-          rel="noreferrer"
-          className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-        >
-          VIN là gì?
-        </a>
+        <div className="flex items-center gap-4">
+          <Link
+            to="/api"
+            className="flex items-center gap-1.5 text-sm text-primary hover:text-primary/80 transition-colors font-medium"
+          >
+            <Code2 className="h-4 w-4" /> API
+          </Link>
+          <a
+            href="https://en.wikipedia.org/wiki/Vehicle_identification_number"
+            target="_blank"
+            rel="noreferrer"
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
+            VIN là gì?
+          </a>
+        </div>
       </header>
 
       <section className="relative z-10 max-w-6xl mx-auto px-6 pt-16 sm:pt-24 pb-10 text-center">
