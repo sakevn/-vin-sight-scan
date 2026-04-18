@@ -1,0 +1,7 @@
+project_id = "xxcdkynwyghtnqlqffsw"
+
+[functions.decode-vin]
+verify_jwt = false
+
+[functions.scan-vin-ai]
+verify_jwt = false
